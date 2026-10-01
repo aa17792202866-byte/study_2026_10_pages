@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.44.0" theme-name="Stellar" theme-version="1.44.0">
   
-  <meta name="robots" content="noindex,follow">
+  
   <meta name="generator" content="Hexo 8.1.2">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin><link rel="preconnect" href="https://unpkg.com" crossorigin><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -17,18 +17,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
-  <title>归档 - 我的博客</title>
+  <title>为什么 AI 喜欢 GPU？算力之外，数据搬运同样重要 - 我的博客</title>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="https://study2026-10.hanruixuan.com/archives/2026/10/">
+  <meta name="description" content="解释 CPU 与 GPU 的分工、显存与带宽，以及为什么高峰值算力不一定带来更快的实际运行速度。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为什么 AI 喜欢 GPU？算力之外，数据搬运同样重要">
+<meta property="og:url" content="https://study2026-10.hanruixuan.com/2026/10/02/gpu-compute-memory-and-ai/">
 <meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="解释 CPU 与 GPU 的分工、显存与带宽，以及为什么高峰值算力不一定带来更快的实际运行速度。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-10-01T17:19:08.000Z">
+<meta property="article:modified_time" content="2026-10-01T17:27:49.635Z">
 <meta property="article:author" content="hanruixuan">
-<meta name="twitter:card" content="summary"><meta name="twitter:title" content="归档">
+<meta property="article:tag" content="AI算力">
+<meta property="article:tag" content="GPU">
+<meta property="article:tag" content="计算机硬件">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="为什么 AI 喜欢 GPU？算力之外，数据搬运同样重要">
   
   
-  
+  <meta name="keywords" content="GPU,计算机硬件,AI算力">
 
   <!-- feed -->
   
@@ -41,7 +48,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://study2026-10.hanruixuan.com","author":{"@type":"Person","name":"hanruixuan","sameAs":[]},"name":"我的博客","description":"","url":"https://study2026-10.hanruixuan.com"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"hanruixuan","sameAs":[]},"dateCreated":"2026-10-02T01:19:08+08:00","dateModified":"2026-10-02T01:27:49+08:00","datePublished":"2026-10-02T01:19:08+08:00","description":"GPU 最初给很多人的印象是“让游戏更流畅的显卡”。在 AI 中，它也承担大量计算。原因与神经网络的运算结构有关：很多任务需要对大量数据重复执行相似的数值计算。\n不过，理解 AI 硬件不能只看宣传页上的算力数字。数据能否及时送到计算单元，同样影响运行速度。","headline":"为什么 AI 喜欢 GPU？算力之外，数据搬运同样重要","mainEntityOfPage":{"@type":"WebPage","@id":"https://study2026-10.hanruixuan.com/2026/10/02/gpu-compute-memory-and-ai/"},"publisher":{"@type":"Organization","name":"hanruixuan","sameAs":[]},"url":"https://study2026-10.hanruixuan.com/2026/10/02/gpu-compute-memory-and-ai/","keywords":"GPU, 计算机硬件, AI算力","thumbnailUrl":"https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg","image":["https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg"]}</script>
   
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -56,7 +63,7 @@
 }</style>
   
 </head>
-<body><div id="l_cover"></div><div class="l_body index" id="start" layout="undefined" type="undefined" ><aside class="l_left leftbar-card" data-ui-surface="card"><div class="sidebg"></div><div class="leftbar-container">
+<body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left leftbar-card" data-ui-surface="card"><div class="sidebg"></div><div class="leftbar-container">
 
 
 
@@ -96,6 +103,8 @@
 
 </nav>
 </div>
+
+
 
 <widget class="widget-wrapper slide-up recent-widget">
   
@@ -296,95 +305,86 @@
 </div></aside><div class="l_main" id="main" data-ui-surface="content">
 
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="title" href="/"><div class="main">我的博客</div><div class="sub cap">记录学习与生活</div></a></div></header>
-
- 
 
 
 
-<div class="navbar top"><div class="navbar-blur"><div class="navbar-container"><nav class="post"><a href="/">近期发布</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a class="active" href="/archives/">归档</a></nav></div></div></div>
-<div class="post-list archives"><article class="slide-up" id="archive"><div class='archive-header h4'>2026</div>
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;ai-data-privacy-practical-guide&#x2F;">
-    <time>10-02</time>
-    <span>把文件交给 AI 之前，先画清楚数据会流向哪里</span>
-  </a>
+
+<div class="article-banner-wrap slide-up"><div class="article banner top">
+  <div class="content">
+    
+    <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%A7%91%E6%8A%80%E5%8E%9F%E7%90%86/">科技原理</a>
+</div></div><div class="meta-row">
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-10-01T17:19:08.000Z">2026-10-02</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-01T17:27:49.635Z">2026-10-02</time></span></div>
+</div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>为什么 AI 喜欢 GPU？算力之外，数据搬运同样重要</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div></div>
+<article class="md-text content slide-up"><p>GPU 最初给很多人的印象是“让游戏更流畅的显卡”。在 AI 中，它也承担大量计算。原因与神经网络的运算结构有关：很多任务需要对大量数据重复执行相似的数值计算。</p>
+<p>不过，理解 AI 硬件不能只看宣传页上的算力数字。数据能否及时送到计算单元，同样影响运行速度。</p>
+<span id="more"></span>
+
+<h2 id="CPU-与-GPU-的设计重点"><a href="#CPU-与-GPU-的设计重点" class="headerlink" title="CPU 与 GPU 的设计重点"></a>CPU 与 GPU 的设计重点</h2><p>概括地说，CPU 更关注少量线程的响应与复杂控制，GPU 更关注大量并行任务的吞吐量。<a target="_blank" rel="noopener" href="https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html">NVIDIA 的 CUDA 最佳实践指南</a> 解释了这种设计差异，以及如何根据任务选择并行方式。</p>
+<p>可以用一个厨房作比喻：少量经验丰富、能够灵活处理步骤的厨师，适合多变的任务；大量执行相似工序的工作台，适合大批量重复操作。这个比喻并不代表真实硬件的内部结构，只帮助理解不同工作负载。</p>
+<p>神经网络中的矩阵运算具有较多并行机会，因此常能利用 GPU 的特点。实际系统依然需要 CPU 完成调度、数据准备和其他工作。</p>
+<h2 id="显存容量决定“放得下多少”"><a href="#显存容量决定“放得下多少”" class="headerlink" title="显存容量决定“放得下多少”"></a>显存容量决定“放得下多少”</h2><p>模型权重、输入、中间结果和缓存都需要空间。显存不足时，系统可能无法运行，也可能通过其他内存或分块策略继续运行，但速度和实现复杂度会发生变化。</p>
+<p>因此，“这张卡计算速度快”与“这张卡能运行这个模型”是两个问题。上下文长度、批量大小和数值精度都会影响容量需求，不能只根据模型名称作判断。</p>
+<h2 id="带宽决定“搬得动多快”"><a href="#带宽决定“搬得动多快”" class="headerlink" title="带宽决定“搬得动多快”"></a>带宽决定“搬得动多快”</h2><p>计算单元等待数据时，峰值算力无法充分发挥。显存带宽、访问方式和 CPU 与 GPU 之间的数据传输，都可能成为限制。</p>
+<p>例如把数据传到 GPU、只计算一点点，再立即传回 CPU，会产生传输和调度开销。合理批处理、减少重复搬运和使用合适的数据布局，可能比单纯更换硬件更有效。</p>
+<p>具体优化必须通过测量确认。不同任务在计算、内存和传输方面的占比并不相同，没有一个技巧能够保证所有程序都变快。</p>
+<h2 id="训练与生成文本的瓶颈可能不同"><a href="#训练与生成文本的瓶颈可能不同" class="headerlink" title="训练与生成文本的瓶颈可能不同"></a>训练与生成文本的瓶颈可能不同</h2><p>模型训练通常处理大量样本，还需要计算梯度和更新参数。文本生成则可能一次产生一个词元，并受批量大小、缓存和模型实现影响。</p>
+<p>这意味着，一项硬件在某种训练测试中表现优秀，不代表它在单用户聊天中也有同样比例的优势。实际体验还涉及首个词元等待时间和后续生成速度，不能只用一个数字概括。</p>
+<h2 id="怎样读硬件性能信息"><a href="#怎样读硬件性能信息" class="headerlink" title="怎样读硬件性能信息"></a>怎样读硬件性能信息</h2><p>看到“每秒多少 token”时，先看模型、精度、上下文长度、批量和测量方式是否相同。看到“峰值算力”时，确认它对应哪种数值精度，以及自己的软件是否能利用相关计算路径。</p>
+<p>为已有设备选择模型时，先做一组固定任务测试，再观察资源占用和等待时间。算力、容量、带宽与软件支持共同决定结果；把它们放在一起看，才能解释为什么某套配置纸面上很强，实际使用却不一定更顺畅。</p>
+</article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/GPU/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>GPU</a><a class="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>计算机硬件</a><a class="tag" href="/tags/AI%E7%AE%97%E5%8A%9B/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>AI算力</a></div>
+
+<div class="article-footer slide-up">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+
 </div>
 
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;gpu-compute-memory-and-ai&#x2F;">
-    <time>10-02</time>
-    <span>为什么 AI 喜欢 GPU？算力之外，数据搬运同样重要</span>
-  </a>
-</div>
+<div class="related-wrap slide-up" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2026/10/02/ai-data-privacy-practical-guide/">把文件交给 AI 之前，先画清楚数据会流向哪里</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2026/10/02/ai-coding-from-demo-to-working-software/">AI 写出了代码，为什么还不能算完成？</a></div></section></div>
 
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;ai-coding-from-demo-to-working-software&#x2F;">
-    <time>10-02</time>
-    <span>AI 写出了代码，为什么还不能算完成？</span>
-  </a>
-</div>
 
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;multimodal-ai-seeing-and-reasoning&#x2F;">
-    <time>10-02</time>
-    <span>多模态 AI 能“看懂”图片到什么程度？</span>
-  </a>
-</div>
 
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;diffusion-image-generation&#x2F;">
-    <time>10-02</time>
-    <span>AI 怎样生成图片？从噪声到图像的扩散模型</span>
-  </a>
-</div>
 
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;local-ai-models-and-quantization&#x2F;">
-    <time>10-02</time>
-    <span>本地运行 AI：参数量、量化与内存到底是什么关系</span>
-  </a>
-</div>
 
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;ai-agents-workflows-and-tools&#x2F;">
-    <time>10-02</time>
-    <span>AI 智能体与聊天机器人有什么区别？关键在行动与反馈</span>
-  </a>
-</div>
-
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;rag-personal-knowledge-base&#x2F;">
-    <time>10-02</time>
-    <span>RAG 是什么？让 AI 查资料再回答</span>
-  </a>
-</div>
-
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;ai-hallucinations-and-verification&#x2F;">
-    <time>10-02</time>
-    <span>AI 为什么会一本正经地说错话？从幻觉到验证</span>
-  </a>
-</div>
-
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;transformer-attention-explained&#x2F;">
-    <time>10-02</time>
-    <span>Transformer 入门：AI 如何从上下文中理解一句话</span>
-  </a>
-</div>
-
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;hello-world&#x2F;">
-    <time>10-02</time>
-    <span>Hello World</span>
-  </a>
-</div>
-</article></div>
 
 <footer class="page-footer slide-up footnote"><hr><div class="text"><p>本站由 <a href="/">hanruixuan</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.44.0">Stellar 1.44.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
-<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right" data-ui-surface="sidebar"></aside><div class='float-panel'>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right" data-ui-surface="sidebar"><div class="widgets">
+
+
+
+
+<widget class="widget-wrapper slide-up toc" id="data-toc" collapse="false">
+  
+    <div class="widget-header dis-select">
+      <span class="name">本文目录</span>
+      <a class="cap-action" onclick="sidebar.toggleTOC()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a>
+    </div>
+  
+  <div class="widget-body"><ol class="toc ui-collection-adapter"><li class="toc-item toc-level-2"><a class="toc-link" href="#CPU-%E4%B8%8E-GPU-%E7%9A%84%E8%AE%BE%E8%AE%A1%E9%87%8D%E7%82%B9"><span class="toc-text">CPU 与 GPU 的设计重点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E5%AD%98%E5%AE%B9%E9%87%8F%E5%86%B3%E5%AE%9A%E2%80%9C%E6%94%BE%E5%BE%97%E4%B8%8B%E5%A4%9A%E5%B0%91%E2%80%9D"><span class="toc-text">显存容量决定“放得下多少”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%A6%E5%AE%BD%E5%86%B3%E5%AE%9A%E2%80%9C%E6%90%AC%E5%BE%97%E5%8A%A8%E5%A4%9A%E5%BF%AB%E2%80%9D"><span class="toc-text">带宽决定“搬得动多快”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E4%B8%8E%E7%94%9F%E6%88%90%E6%96%87%E6%9C%AC%E7%9A%84%E7%93%B6%E9%A2%88%E5%8F%AF%E8%83%BD%E4%B8%8D%E5%90%8C"><span class="toc-text">训练与生成文本的瓶颈可能不同</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%8E%E6%A0%B7%E8%AF%BB%E7%A1%AC%E4%BB%B6%E6%80%A7%E8%83%BD%E4%BF%A1%E6%81%AF"><span class="toc-text">怎样读硬件性能信息</span></a></li></ol></div>
+  <div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="currentColor" fill-rule="evenodd" d="M11.9426 1.25H12.0574C14.3658 1.24999 16.1748 1.24998 17.5863 1.43975C19.031 1.63399 20.1711 2.03933 21.0659 2.93414C21.9607 3.82895 22.366 4.96897 22.5603 6.41371C22.75 7.82519 22.75 9.63423 22.75 11.9426V12.0574C22.75 14.3658 22.75 16.1748 22.5603 17.5863C22.366 19.031 21.9607 20.1711 21.0659 21.0659C20.1711 21.9607 19.031 22.366 17.5863 22.5603C16.1748 22.75 14.3658 22.75 12.0574 22.75H11.9426C9.63423 22.75 7.82519 22.75 6.41371 22.5603C4.96897 22.366 3.82895 21.9607 2.93414 21.0659C2.03933 20.1711 1.63399 19.031 1.43975 17.5863C1.24998 16.1748 1.24999 14.3658 1.25 12.0574V11.9426C1.24999 9.63423 1.24998 7.82519 1.43975 6.41371C1.63399 4.96897 2.03933 3.82895 2.93414 2.93414C3.82895 2.03933 4.96897 1.63399 6.41371 1.43975C7.82519 1.24998 9.63423 1.24999 11.9426 1.25ZM6.61358 2.92637C5.33517 3.09825 4.56445 3.42514 3.9948 3.9948C3.42514 4.56445 3.09825 5.33517 2.92637 6.61358C2.75159 7.91356 2.75 9.62177 2.75 12C2.75 14.3782 2.75159 16.0864 2.92637 17.3864C3.09825 18.6648 3.42514 19.4355 3.9948 20.0052C4.56445 20.5749 5.33517 20.9018 6.61358 21.0736C7.91356 21.2484 9.62177 21.25 12 21.25C14.3782 21.25 16.0864 21.2484 17.3864 21.0736C18.6648 20.9018 19.4355 20.5749 20.0052 20.0052C20.5749 19.4355 20.9018 18.6648 21.0736 17.3864C21.2484 16.0864 21.25 14.3782 21.25 12C21.25 9.62177 21.2484 7.91356 21.0736 6.61358C20.9018 5.33517 20.5749 4.56445 20.0052 3.9948C19.4355 3.42514 18.6648 3.09825 17.3864 2.92637C16.0864 2.75159 14.3782 2.75 12 2.75C9.62177 2.75 7.91356 2.75159 6.61358 2.92637ZM12 9.56066L9.53033 12.0303C9.23744 12.3232 8.76256 12.3232 8.46967 12.0303C8.17678 11.7374 8.17678 11.2626 8.46967 10.9697L11.4697 7.96967C11.7626 7.67678 12.2374 7.67678 12.5303 7.96967L15.5303 10.9697C15.8232 11.2626 15.8232 11.7374 15.5303 12.0303C15.2374 12.3232 14.7626 12.3232 14.4697 12.0303L12 9.56066ZM12 13.5607L9.53033 16.0303C9.23744 16.3232 8.76256 16.3232 8.46967 16.0303C8.17678 15.7374 8.17678 15.2626 8.46967 14.9697L11.4697 11.9697C11.7626 11.6768 12.2374 11.6768 12.5303 11.9697L15.5303 14.9697C15.8232 15.2626 15.8232 15.7374 15.5303 16.0303C15.2374 16.3232 14.7626 16.3232 14.4697 16.0303L12 13.5607Z" clip-rule="evenodd"/></svg><span>回到顶部</span></a></div>
+</widget>
+
+
+</div></aside><div class='float-panel'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
@@ -397,7 +397,7 @@
 
 <script type="text/javascript">
   window.canonical = {"originalHost":null,"officialHosts":["localhost"],"encoded":""};
-  window.canonical["param"] = {"permalink":null,"checklink":"/js/plugins/video.js"};
+  window.canonical["param"] = {"permalink":"https://study2026-10.hanruixuan.com/2026/10/02/gpu-compute-memory-and-ai/","checklink":"/js/plugins/video.js"};
   // Fix: Ensure page is at the correct top position on data load
   if (history.scrollRestoration) {
     history.scrollRestoration = 'auto';

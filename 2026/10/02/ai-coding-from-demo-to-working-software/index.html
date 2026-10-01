@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.44.0" theme-name="Stellar" theme-version="1.44.0">
   
-  <meta name="robots" content="noindex,follow">
+  
   <meta name="generator" content="Hexo 8.1.2">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin><link rel="preconnect" href="https://unpkg.com" crossorigin><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -17,18 +17,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
-  <title>归档 - 我的博客</title>
+  <title>AI 写出了代码，为什么还不能算完成？ - 我的博客</title>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="https://study2026-10.hanruixuan.com/archives/2026/10/">
+  <meta name="description" content="从需求、运行环境、边界条件和验收标准出发，建立可以验证的 AI 编程流程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI 写出了代码，为什么还不能算完成？">
+<meta property="og:url" content="https://study2026-10.hanruixuan.com/2026/10/02/ai-coding-from-demo-to-working-software/">
 <meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="从需求、运行环境、边界条件和验收标准出发，建立可以验证的 AI 编程流程。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-10-01T17:19:07.000Z">
+<meta property="article:modified_time" content="2026-10-01T17:27:49.634Z">
 <meta property="article:author" content="hanruixuan">
-<meta name="twitter:card" content="summary"><meta name="twitter:title" content="归档">
+<meta property="article:tag" content="AI编程">
+<meta property="article:tag" content="测试">
+<meta property="article:tag" content="软件工程">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="AI 写出了代码，为什么还不能算完成？">
   
   
-  
+  <meta name="keywords" content="AI编程,软件工程,测试">
 
   <!-- feed -->
   
@@ -41,7 +48,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://study2026-10.hanruixuan.com","author":{"@type":"Person","name":"hanruixuan","sameAs":[]},"name":"我的博客","description":"","url":"https://study2026-10.hanruixuan.com"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"hanruixuan","sameAs":[]},"dateCreated":"2026-10-02T01:19:07+08:00","dateModified":"2026-10-02T01:27:49+08:00","datePublished":"2026-10-02T01:19:07+08:00","description":"让 AI 写一个网页或脚本，几秒钟就能得到一大段代码。但复制到自己的电脑以后，可能找不到依赖、遇到版本冲突，或者在第二次运行时才暴露问题。\n代码生成只是软件工作的一个环节。能够在目标环境里运行，并解决原来的需求，才是更有意义的完成标准。","headline":"AI 写出了代码，为什么还不能算完成？","mainEntityOfPage":{"@type":"WebPage","@id":"https://study2026-10.hanruixuan.com/2026/10/02/ai-coding-from-demo-to-working-software/"},"publisher":{"@type":"Organization","name":"hanruixuan","sameAs":[]},"url":"https://study2026-10.hanruixuan.com/2026/10/02/ai-coding-from-demo-to-working-software/","keywords":"AI编程, 软件工程, 测试","thumbnailUrl":"https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg","image":["https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg"]}</script>
   
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -56,7 +63,7 @@
 }</style>
   
 </head>
-<body><div id="l_cover"></div><div class="l_body index" id="start" layout="undefined" type="undefined" ><aside class="l_left leftbar-card" data-ui-surface="card"><div class="sidebg"></div><div class="leftbar-container">
+<body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left leftbar-card" data-ui-surface="card"><div class="sidebg"></div><div class="leftbar-container">
 
 
 
@@ -96,6 +103,8 @@
 
 </nav>
 </div>
+
+
 
 <widget class="widget-wrapper slide-up recent-widget">
   
@@ -296,95 +305,87 @@
 </div></aside><div class="l_main" id="main" data-ui-surface="content">
 
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="title" href="/"><div class="main">我的博客</div><div class="sub cap">记录学习与生活</div></a></div></header>
-
- 
 
 
 
-<div class="navbar top"><div class="navbar-blur"><div class="navbar-container"><nav class="post"><a href="/">近期发布</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a class="active" href="/archives/">归档</a></nav></div></div></div>
-<div class="post-list archives"><article class="slide-up" id="archive"><div class='archive-header h4'>2026</div>
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;ai-data-privacy-practical-guide&#x2F;">
-    <time>10-02</time>
-    <span>把文件交给 AI 之前，先画清楚数据会流向哪里</span>
-  </a>
+
+<div class="article-banner-wrap slide-up"><div class="article banner top">
+  <div class="content">
+    
+    <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%A7%91%E6%8A%80%E5%AE%9E%E8%B7%B5/">科技实践</a>
+</div></div><div class="meta-row">
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-10-01T17:19:07.000Z">2026-10-02</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-01T17:27:49.634Z">2026-10-02</time></span></div>
+</div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>AI 写出了代码，为什么还不能算完成？</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div></div>
+<article class="md-text content slide-up"><p>让 AI 写一个网页或脚本，几秒钟就能得到一大段代码。但复制到自己的电脑以后，可能找不到依赖、遇到版本冲突，或者在第二次运行时才暴露问题。</p>
+<p>代码生成只是软件工作的一个环节。能够在目标环境里运行，并解决原来的需求，才是更有意义的完成标准。</p>
+<span id="more"></span>
+
+<h2 id="先把“想要什么”写成可观察的行为"><a href="#先把“想要什么”写成可观察的行为" class="headerlink" title="先把“想要什么”写成可观察的行为"></a>先把“想要什么”写成可观察的行为</h2><p>“做一个好看的博客”包含很多没有说明的选择。更具体的需求可以是：“使用中文标题，首页列出最新十篇文章，在手机宽度下文章内容不横向溢出，部署后能从自定义域名访问。”</p>
+<p>这些要求都能通过页面或运行结果检查。明确输入、输出和限制，可以减少模型根据默认经验补充不符合项目目标的设计。</p>
+<p>同样，写脚本时应说明操作系统、输入文件、输出位置，以及文件已经存在时的处理方式。很多所谓“代码问题”，实际上是遗漏了环境与任务条件。</p>
+<h2 id="小步修改更容易定位问题"><a href="#小步修改更容易定位问题" class="headerlink" title="小步修改更容易定位问题"></a>小步修改更容易定位问题</h2><p>如果同时换主题、升级依赖、修改域名和重写部署流程，出现错误后就很难知道是哪一步导致的。</p>
+<p>可以把工作拆成能够单独验证的改动：先确保项目能构建，再接入主题，然后检查本地预览，最后处理部署与域名。每一步留下成功或失败的证据。</p>
+<p>已有项目还需要注意原来的结构和约定。生成一套全新代码有时看起来更整齐，却可能漏掉项目原先的重要行为。</p>
+<h2 id="测试要覆盖真实失败方式"><a href="#测试要覆盖真实失败方式" class="headerlink" title="测试要覆盖真实失败方式"></a>测试要覆盖真实失败方式</h2><p>假设 AI 写了一个“停止预览服务”的脚本。只检查脚本文件存在，并不能证明它能停止服务。至少需要实际启动一个服务，执行停止命令，再检查端口是否还在监听。</p>
+<p>这个例子说明，测试应该针对需求的关键结果。计算函数要检查边界输入，网页要检查实际布局，命令行工具要检查退出状态和输出文件。并非每个小改动都需要庞大的测试套件，但关键风险需要有对应验证。</p>
+<h2 id="如何理解-AI-编程榜单"><a href="#如何理解-AI-编程榜单" class="headerlink" title="如何理解 AI 编程榜单"></a>如何理解 AI 编程榜单</h2><p><a target="_blank" rel="noopener" href="https://www.swebench.com/">SWE-bench</a> 等评测使用软件仓库中的任务来评估系统处理问题的能力。它们提供了有价值的共同测试场景，但分数不能直接等同于某个系统对你所有项目的成功率。</p>
+<p>比较时还需要关注评测版本、工具配置、尝试次数和资源预算。模型与工具共同组成的系统，可能比单独的模型名称更能解释结果。</p>
+<p>因此，在自己的项目上准备几项固定任务，记录完成时间、人工修改量和剩余错误，会比只看一个排行榜数字更贴近实际需求。</p>
+<h2 id="让-AI-交付证据"><a href="#让-AI-交付证据" class="headerlink" title="让 AI 交付证据"></a>让 AI 交付证据</h2><p>一次有用的交付应该说明修改了什么、为何修改、如何验证，以及还有哪些没有验证的部分。特别要区分“构建成功”“推送成功”和“线上访问正常”，它们不是同一个检查。</p>
+<p>AI 编程可以让起草、探索和重复操作更快。使用者仍需要掌握最基本的运行与验收方法：知道命令在哪里执行，能读懂直接报错，也能确认最终结果。这样，生成的代码才会逐步变成可维护的软件。</p>
+</article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/AI%E7%BC%96%E7%A8%8B/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>AI编程</a><a class="tag" href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>软件工程</a><a class="tag" href="/tags/%E6%B5%8B%E8%AF%95/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>测试</a></div>
+
+<div class="article-footer slide-up">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+
 </div>
 
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;gpu-compute-memory-and-ai&#x2F;">
-    <time>10-02</time>
-    <span>为什么 AI 喜欢 GPU？算力之外，数据搬运同样重要</span>
-  </a>
-</div>
+<div class="related-wrap slide-up" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2026/10/02/gpu-compute-memory-and-ai/">为什么 AI 喜欢 GPU？算力之外，数据搬运同样重要</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2026/10/02/multimodal-ai-seeing-and-reasoning/">多模态 AI 能“看懂”图片到什么程度？</a></div></section></div>
 
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;ai-coding-from-demo-to-working-software&#x2F;">
-    <time>10-02</time>
-    <span>AI 写出了代码，为什么还不能算完成？</span>
-  </a>
-</div>
 
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;multimodal-ai-seeing-and-reasoning&#x2F;">
-    <time>10-02</time>
-    <span>多模态 AI 能“看懂”图片到什么程度？</span>
-  </a>
-</div>
 
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;diffusion-image-generation&#x2F;">
-    <time>10-02</time>
-    <span>AI 怎样生成图片？从噪声到图像的扩散模型</span>
-  </a>
-</div>
 
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;local-ai-models-and-quantization&#x2F;">
-    <time>10-02</time>
-    <span>本地运行 AI：参数量、量化与内存到底是什么关系</span>
-  </a>
-</div>
 
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;ai-agents-workflows-and-tools&#x2F;">
-    <time>10-02</time>
-    <span>AI 智能体与聊天机器人有什么区别？关键在行动与反馈</span>
-  </a>
-</div>
-
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;rag-personal-knowledge-base&#x2F;">
-    <time>10-02</time>
-    <span>RAG 是什么？让 AI 查资料再回答</span>
-  </a>
-</div>
-
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;ai-hallucinations-and-verification&#x2F;">
-    <time>10-02</time>
-    <span>AI 为什么会一本正经地说错话？从幻觉到验证</span>
-  </a>
-</div>
-
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;transformer-attention-explained&#x2F;">
-    <time>10-02</time>
-    <span>Transformer 入门：AI 如何从上下文中理解一句话</span>
-  </a>
-</div>
-
-<div class="archive-list">
-  <a class="post fs14" href="&#x2F;2026&#x2F;10&#x2F;02&#x2F;hello-world&#x2F;">
-    <time>10-02</time>
-    <span>Hello World</span>
-  </a>
-</div>
-</article></div>
 
 <footer class="page-footer slide-up footnote"><hr><div class="text"><p>本站由 <a href="/">hanruixuan</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.44.0">Stellar 1.44.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
-<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right" data-ui-surface="sidebar"></aside><div class='float-panel'>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right" data-ui-surface="sidebar"><div class="widgets">
+
+
+
+
+<widget class="widget-wrapper slide-up toc" id="data-toc" collapse="false">
+  
+    <div class="widget-header dis-select">
+      <span class="name">本文目录</span>
+      <a class="cap-action" onclick="sidebar.toggleTOC()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a>
+    </div>
+  
+  <div class="widget-body"><ol class="toc ui-collection-adapter"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E6%8A%8A%E2%80%9C%E6%83%B3%E8%A6%81%E4%BB%80%E4%B9%88%E2%80%9D%E5%86%99%E6%88%90%E5%8F%AF%E8%A7%82%E5%AF%9F%E7%9A%84%E8%A1%8C%E4%B8%BA"><span class="toc-text">先把“想要什么”写成可观察的行为</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E6%AD%A5%E4%BF%AE%E6%94%B9%E6%9B%B4%E5%AE%B9%E6%98%93%E5%AE%9A%E4%BD%8D%E9%97%AE%E9%A2%98"><span class="toc-text">小步修改更容易定位问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E8%A6%81%E8%A6%86%E7%9B%96%E7%9C%9F%E5%AE%9E%E5%A4%B1%E8%B4%A5%E6%96%B9%E5%BC%8F"><span class="toc-text">测试要覆盖真实失败方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3-AI-%E7%BC%96%E7%A8%8B%E6%A6%9C%E5%8D%95"><span class="toc-text">如何理解 AI 编程榜单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A9-AI-%E4%BA%A4%E4%BB%98%E8%AF%81%E6%8D%AE"><span class="toc-text">让 AI 交付证据</span></a></li></ol></div>
+  <div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="currentColor" fill-rule="evenodd" d="M11.9426 1.25H12.0574C14.3658 1.24999 16.1748 1.24998 17.5863 1.43975C19.031 1.63399 20.1711 2.03933 21.0659 2.93414C21.9607 3.82895 22.366 4.96897 22.5603 6.41371C22.75 7.82519 22.75 9.63423 22.75 11.9426V12.0574C22.75 14.3658 22.75 16.1748 22.5603 17.5863C22.366 19.031 21.9607 20.1711 21.0659 21.0659C20.1711 21.9607 19.031 22.366 17.5863 22.5603C16.1748 22.75 14.3658 22.75 12.0574 22.75H11.9426C9.63423 22.75 7.82519 22.75 6.41371 22.5603C4.96897 22.366 3.82895 21.9607 2.93414 21.0659C2.03933 20.1711 1.63399 19.031 1.43975 17.5863C1.24998 16.1748 1.24999 14.3658 1.25 12.0574V11.9426C1.24999 9.63423 1.24998 7.82519 1.43975 6.41371C1.63399 4.96897 2.03933 3.82895 2.93414 2.93414C3.82895 2.03933 4.96897 1.63399 6.41371 1.43975C7.82519 1.24998 9.63423 1.24999 11.9426 1.25ZM6.61358 2.92637C5.33517 3.09825 4.56445 3.42514 3.9948 3.9948C3.42514 4.56445 3.09825 5.33517 2.92637 6.61358C2.75159 7.91356 2.75 9.62177 2.75 12C2.75 14.3782 2.75159 16.0864 2.92637 17.3864C3.09825 18.6648 3.42514 19.4355 3.9948 20.0052C4.56445 20.5749 5.33517 20.9018 6.61358 21.0736C7.91356 21.2484 9.62177 21.25 12 21.25C14.3782 21.25 16.0864 21.2484 17.3864 21.0736C18.6648 20.9018 19.4355 20.5749 20.0052 20.0052C20.5749 19.4355 20.9018 18.6648 21.0736 17.3864C21.2484 16.0864 21.25 14.3782 21.25 12C21.25 9.62177 21.2484 7.91356 21.0736 6.61358C20.9018 5.33517 20.5749 4.56445 20.0052 3.9948C19.4355 3.42514 18.6648 3.09825 17.3864 2.92637C16.0864 2.75159 14.3782 2.75 12 2.75C9.62177 2.75 7.91356 2.75159 6.61358 2.92637ZM12 9.56066L9.53033 12.0303C9.23744 12.3232 8.76256 12.3232 8.46967 12.0303C8.17678 11.7374 8.17678 11.2626 8.46967 10.9697L11.4697 7.96967C11.7626 7.67678 12.2374 7.67678 12.5303 7.96967L15.5303 10.9697C15.8232 11.2626 15.8232 11.7374 15.5303 12.0303C15.2374 12.3232 14.7626 12.3232 14.4697 12.0303L12 9.56066ZM12 13.5607L9.53033 16.0303C9.23744 16.3232 8.76256 16.3232 8.46967 16.0303C8.17678 15.7374 8.17678 15.2626 8.46967 14.9697L11.4697 11.9697C11.7626 11.6768 12.2374 11.6768 12.5303 11.9697L15.5303 14.9697C15.8232 15.2626 15.8232 15.7374 15.5303 16.0303C15.2374 16.3232 14.7626 16.3232 14.4697 16.0303L12 13.5607Z" clip-rule="evenodd"/></svg><span>回到顶部</span></a></div>
+</widget>
+
+
+</div></aside><div class='float-panel'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
@@ -397,7 +398,7 @@
 
 <script type="text/javascript">
   window.canonical = {"originalHost":null,"officialHosts":["localhost"],"encoded":""};
-  window.canonical["param"] = {"permalink":null,"checklink":"/js/plugins/video.js"};
+  window.canonical["param"] = {"permalink":"https://study2026-10.hanruixuan.com/2026/10/02/ai-coding-from-demo-to-working-software/","checklink":"/js/plugins/video.js"};
   // Fix: Ensure page is at the correct top position on data load
   if (history.scrollRestoration) {
     history.scrollRestoration = 'auto';
